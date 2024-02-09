@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import Player from './Player/Player'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <main>
+      <Player name="Player 1" score={400} current={0} isActive={true} />
+      <Player name="Player 2" score={24} current={0} isActive={false} />
+      <img src="dice-5.png" alt="Playing dice" className="dice" />
+      <button className="btn btn--new">🔄 New game</button>
+      <button className="btn btn--roll">🎲 Roll dice</button>
+      <button className="btn btn--hold">📥 Hold</button>
+    </main>
+  )
 }
 
-export default App;
+export default App
